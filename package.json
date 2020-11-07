@@ -5,7 +5,7 @@
   "description": "Custom id plugin for Mongoose",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha tests/*.js -R spec --ui bdd --timeout 5000"
+    "test": "./node_modules/.bin/mocha test/*.js -R spec --ui bdd --timeout 5000"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "mocha": "^5.2.0",
-    "mongoose": "^5.3.15",
+    "mongoose": "^5.10.13",
     "should": "^13.2.3"
   }
 }

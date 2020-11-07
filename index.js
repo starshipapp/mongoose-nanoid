@@ -3,7 +3,7 @@ const nanoid = require('nanoid');
 function nanoidPlugin(schema, length) {
     if (schema.options._id !== undefined && schema.options._id === false) return;
 
-    length = length || 12;
+    length = length || 16;
 
     let _id = '_id';
     const dataObj = {};
@@ -11,7 +11,7 @@ function nanoidPlugin(schema, length) {
     dataObj[_id] = {
         type: String,
         default: function () {
-            return nanoid(length)
+            return nanoid.nanoid(length)
         }
     };
 
@@ -29,7 +29,7 @@ function nanoidPlugin(schema, length) {
 }
 
 function attemptToGenerate(doc, length) {
-    const id = nanoid(length);
+    const id = nanoid.nanoid(length);
     return doc.constructor.findById(id)
         .then(function (found) {
             if (found) return attemptToGenerate(doc, length);

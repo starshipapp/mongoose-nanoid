@@ -80,7 +80,7 @@ describe('SchemaId Test', function () {
 
         let list = [];
         for (let i = 0; i < 1000; i++) {
-            list.push(nanoid(length))
+            list.push(nanoid.nanoid(length))
         }
 
 
